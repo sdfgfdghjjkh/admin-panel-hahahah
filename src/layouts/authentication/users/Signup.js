@@ -33,8 +33,8 @@ function Signup() {
     email: '',
     password: '',
     role: '',
-    bankName: '',
-    brandName: '',
+    // bankName: '',
+    // brandName: '',
     uid: ''
   })
   const navigate = useNavigate();
@@ -48,35 +48,35 @@ function Signup() {
       try {
         const user = await createUserWithEmailAndPassword(auth, signupUser.email, signupUser.password)
         navigate("/login")
-        if (signupUser.role === 'admin' || signupUser.role === 'bank' || signupUser.role === 'brand') {
-          let docId = await addDoc(collection(db, 'users'), {
-            email: signupUser.email,
-            password: signupUser.password,
-            role: signupUser.role,
-            uid: user.user.uid,
-          })
-          const updateBankData = {
-            bankName: signupUser.bankName.toLowerCase().replace(/\s+/g, '').trim()
-          }
-          if (signupUser.role === 'bank') {
-            const DocRef = doc(db, "users", docId.id)
-            await setDoc(DocRef, updateBankData, { merge: true })
-          }
-          const updateBrandData = {
-            brandName: signupUser.brandName.toLowerCase().replace(/\s+/g, '').trim()
-          }
-          if (signupUser.role === 'brand') {
-            const DocRef = doc(db, "users", docId.id)
-            await setDoc(DocRef, updateBrandData, { merge: true })
-          }
-        }
+        // if (signupUser.role === 'admin' || signupUser.role === 'bank' || signupUser.role === 'brand') {
+        //   let docId = await addDoc(collection(db, 'users'), {
+        //     email: signupUser.email,
+        //     password: signupUser.password,
+        //     role: signupUser.role,
+        //     uid: user.user.uid,
+        //   })
+          // const updateBankData = {
+          //   bankName: signupUser.bankName.toLowerCase().replace(/\s+/g, '').trim()
+          // }
+          // if (signupUser.role === 'bank') {
+          //   const DocRef = doc(db, "users", docId.id)
+          //   await setDoc(DocRef, updateBankData, { merge: true })
+          // }
+          // const updateBrandData = {
+          //   brandName: signupUser.brandName.toLowerCase().replace(/\s+/g, '').trim()
+          // }
+          // if (signupUser.role === 'brand') {
+          //   const DocRef = doc(db, "users", docId.id)
+          //   await setDoc(DocRef, updateBrandData, { merge: true })
+          // }
+        // }
         setSignupUser({
           email: '',
           password: '',
           role: '',
           uid: '',
-          bankName: '',
-          brandName: '',
+          // bankName: '',
+          // brandName: '',
         })
 
         setLoading(false)
@@ -107,7 +107,7 @@ function Signup() {
           textAlign="center"
         >
           <MDTypography variant="h5" fontWeight="medium" color="white" mt={1}>
-            SIGN UP
+            Рега админа
           </MDTypography>
         </MDBox>
         <MDBox pt={4} pb={3} px={3}>
@@ -154,7 +154,7 @@ function Signup() {
                   email: e.target.value
                 })}
                 type="email"
-                label="Email"
+                label="Почта"
                 variant="standard"
                 fullWidth
                 required
@@ -168,12 +168,12 @@ function Signup() {
                   password: e.target.value
                 })}
                 type="password"
-                label="Password"
+                label="Пароль"
                 variant="standard"
                 fullWidth
                 required />
             </MDBox>
-            <MDBox mb={2}>
+            {/* <MDBox mb={2}>
               <FormControl fullWidth variant="standard">
                 <InputLabel id="demo-simple-select-label" sx={{ height: "2.8rem" }} required>Select Role</InputLabel>
                 <Select
@@ -192,8 +192,8 @@ function Signup() {
                   <MenuItem value={'brand'}>brand</MenuItem>
                 </Select>
               </FormControl>
-            </MDBox>
-            {signupUser.role !== 'bank' ? null : <MDBox mb={2}>
+            </MDBox> */}
+            {/* {signupUser.role !== 'bank' ? null : <MDBox mb={2}>
               <MDInput
                 value={signupUser.bankName}
                 onChange={(e) => setSignupUser({
@@ -218,7 +218,7 @@ function Signup() {
                 variant="standard"
                 fullWidth
                 required />
-            </MDBox>}
+            </MDBox>} */}
             <MDBox mt={4} mb={1} sx={{ display: 'flex', direction: 'row', justifyContent: 'center' }}>
               {loading ?
                 <CircularProgress
@@ -230,7 +230,7 @@ function Signup() {
                 /> : <MDButton
                   // disabled={signupUser.email === '' || signupUser.password === '' || signupUser.role === '' ? true : false}
                   variant="gradient" color="info" fullWidth type="submit" onClick={handleSignup}>
-                  SIGN UP
+                  Регаемся
                 </MDButton>
               }
             </MDBox>

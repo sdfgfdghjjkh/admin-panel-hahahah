@@ -33,6 +33,7 @@ import brandDark from "assets/images/logo-ct-dark.png";
 
 // Amdin panel React contexts
 import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context";
+import Signup from "layouts/authentication/users/Signup";
 
 function App() {
   const { role } = useContext(AuthContext)
@@ -93,27 +94,28 @@ function App() {
     });
 
   const configsButton = (
-    <MDBox
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      width="3.25rem"
-      height="3.25rem"
-      bgColor="white"
-      shadow="sm"
-      borderRadius="50%"
-      position="fixed"
-      right="2rem"
-      bottom="2rem"
-      zIndex={99}
-      color="dark"
-      sx={{ cursor: "pointer" }}
-      onClick={handleConfiguratorOpen}
-    >
-      <Icon fontSize="small" color="inherit">
-        settings
-      </Icon>
-    </MDBox>
+    // <MDBox
+    //   display="flex"
+    //   justifyContent="center"
+    //   alignItems="center"
+    //   width="3.25rem"
+    //   height="3.25rem"
+    //   bgColor="white"
+    //   shadow="sm"
+    //   borderRadius="50%"
+    //   position="fixed"
+    //   right="2rem"
+    //   bottom="2rem"
+    //   zIndex={99}
+    //   color="dark"
+    //   sx={{ cursor: "pointer" }}
+    //   onClick={handleConfiguratorOpen}
+    // >
+    //   <Icon fontSize="small" color="inherit">
+    //     settings
+    //   </Icon>
+    // </MDBox>
+    <></>
   );
   return (
     <ThemeProvider theme={darkMode ? themeDark : theme}>
@@ -135,9 +137,10 @@ function App() {
       {layout === "vr" && <Configurator />}
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         {getRoutes(routes)}
         {getAuthRoutes(authRoutes)}
-        {role === null ? <Route path="*" element={<Navigate to={`/login`} />} /> : <Route path="*" element={<Navigate to={`/${role}/dashboard`} />} />}
+        {role === null ? <Route path="*" element={<Navigate to={`/login`} />} /> : <Route path="*" element={<Navigate to={`/${role}/`} />} />}
       </Routes>
     </ThemeProvider>
   );

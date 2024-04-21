@@ -64,7 +64,7 @@ function Dashboard() {
         console.log('No registration token available');
       }
     } else if (permission === "denied") {
-      alert('Notification Permission Denied!');
+      console.log('Notification Permission Denied!');
     }
   }
   React.useEffect(() => {

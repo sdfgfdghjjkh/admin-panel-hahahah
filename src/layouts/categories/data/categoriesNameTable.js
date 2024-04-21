@@ -384,7 +384,7 @@ function Data() {
   return {
     columns: [
       { Header: "SR NO#", accessor: "srNo", width: '10%', align: "left" },
-      { Header: "Category Name", accessor: "category", align: "left" },
+      { Header: "Mamont name", accessor: "category", align: "left" },
       { Header: "Action", accessor: "action", align: "right" }
 
     ],
@@ -409,18 +409,15 @@ function Data() {
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
           >
-            <DialogTitle id="alert-dialog-title">
-              {"Alert"}
-            </DialogTitle>
             <DialogContent>
               <DialogContentText id="alert-dialog-description">
-                Are you sure you want to delete this?
+                Точно удалить бро?
               </DialogContentText>
             </DialogContent>
             <DialogActions>
-              <Button onClick={deleteAlertClose}>Cancel</Button>
+              <Button onClick={deleteAlertClose}>Не, не надо</Button>
               <Button sx={{ color: 'error.main' }} onClick={deleteById}>
-                Delete
+              Удалить
               </Button>
             </DialogActions>
           </Dialog>

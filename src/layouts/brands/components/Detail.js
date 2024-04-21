@@ -45,7 +45,7 @@ function Detail() {
                 <Card>
                   <MDBox pt={3} px={2}>
                     <MDTypography variant="h6" fontWeight="medium" sx={{ textAlign: 'center' }}>
-                      Brand Detail
+                      
                     </MDTypography>
                   </MDBox>
                   <MDBox pt={1} pb={2} px={2}>

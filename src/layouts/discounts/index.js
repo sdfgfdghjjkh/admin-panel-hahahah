@@ -224,7 +224,6 @@ function Discounts() {
           contactNo: brandDbData.contactNo,
           website: brandDbData.website,
           category: brandDbData.category,
-          logo: brandDbData.logo,
           uid: brandDbData.uid
         },
         locations: locationTableData,

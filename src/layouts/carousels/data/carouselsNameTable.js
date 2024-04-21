@@ -116,18 +116,15 @@ function Data() {
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
           >
-            <DialogTitle id="alert-dialog-title">
-              {"Alert"}
-            </DialogTitle>
             <DialogContent>
               <DialogContentText id="alert-dialog-description">
-                Are you sure you want to delete this?
+                Точно удалить бро?
               </DialogContentText>
             </DialogContent>
             <DialogActions>
-              <Button onClick={deleteAlertClose}>Cancel</Button>
+              <Button onClick={deleteAlertClose}>Не, не надо</Button>
               <Button sx={{ color: 'error.main' }} onClick={onDeleteCarousels}>
-                Delete
+              Удалить
               </Button>
             </DialogActions>
           </Dialog>

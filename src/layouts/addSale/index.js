@@ -209,7 +209,6 @@ function AddSale() {
           contactNo: brandDbData.contactNo,
           website: brandDbData.website,
           category: brandDbData.category,
-          logo: brandDbData.logo,
           uid: brandDbData.uid
         },
         title: brandsSaleData.title,

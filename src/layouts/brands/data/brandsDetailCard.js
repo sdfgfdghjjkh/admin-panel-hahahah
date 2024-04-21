@@ -313,18 +313,15 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"Alert"}
-        </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Are you sure you want to delete this?
+            Точно удалить бро?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={deleteAlertClose}>Cancel</Button>
+          <Button onClick={deleteAlertClose}>Не, не надо</Button>
           <Button sx={{ color: 'error.main' }} onClick={() => { deleteById(dataId) }}>
-            Delete
+          Удалить
           </Button>
         </DialogActions>
       </Dialog>
@@ -381,7 +378,7 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
             autoComplete="off"
           >
             <TextField
-              label="Brand Name"
+              label="Заголовок"
               type="text"
               color="secondary"
               required
@@ -392,7 +389,7 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
               })}
             />
             <TextField
-              label="Contact Number"
+              label="Оплата"
               type="number"
               color="secondary"
               required
@@ -403,7 +400,7 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
               })}
             />
             <TextField
-              label="Website URL"
+              label="Ссылка на сайт"
               type='url'
               color="secondary"
               required
@@ -415,12 +412,12 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
             />
             <Box sx={{ maxWidth: "100%", m: 2 }}>
               <FormControl fullWidth >
-                <InputLabel id="demo-simple-select-label" sx={{ height: "2.8rem" }} required>Select Brand Category</InputLabel>
+                <InputLabel id="demo-simple-select-label" sx={{ height: "2.8rem" }} required>Изменить пользователя</InputLabel>
                 <Select
                   sx={{ height: "2.8rem" }}
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  label="Select Brand Category"
+                  label="Изменить пользователя"
                   value={dbBrandsData.category}
                   onChange={(e) => setDbBrandsData({
                     ...dbBrandsData,
@@ -435,7 +432,7 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
                 </Select>
               </FormControl>
               <FormControl fullWidth sx={{ mt: 2 }} >
-                <InputLabel htmlFor="outlined-adornment-amount" >Brand Logo</InputLabel>
+                <InputLabel htmlFor="outlined-adornment-amount" >Фотография</InputLabel>
                 <OutlinedInput
                   sx={{ height: "2.8rem" }}
                   id="outlined-adornment-amount"
@@ -501,7 +498,7 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
               }}
             /> : <MDButton variant="contained" color="info" type="submit"
               onClick={onUpdateBrand}
-            >Update</MDButton>
+            >Обновить</MDButton>
           }
         </DialogActions>
       </BootstrapDialog>
@@ -526,7 +523,7 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
             mb={2}
           >
             <MDTypography variant="caption" color="text">
-              Brand Name:&nbsp;&nbsp;&nbsp;
+              Заголовок:&nbsp;&nbsp;&nbsp;
               <MDTypography variant="button" fontWeight="medium" textTransform="capitalize">
                 {name}
               </MDTypography>
@@ -535,18 +532,18 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
             <MDBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
               <MDBox mr={1}>
                 <MDButton variant="text" color="error" onClick={deleteAlertOpen}>
-                  <Icon>delete</Icon>&nbsp;delete
+                  <Icon>delete</Icon>&nbsp;Удалить
                 </MDButton>
               </MDBox>
               <MDButton variant="text" color={darkMode ? "white" : "dark"} onClick={brandsModalOpen}>
-                <Icon>edit</Icon>&nbsp;edit
+                <Icon>edit</Icon>&nbsp;Изменить
               </MDButton>
             </MDBox>
 
           </MDBox>
           <MDBox mb={1} lineHeight={0}>
             <MDTypography variant="caption" color="text">
-              Contact Number:&nbsp;&nbsp;&nbsp;
+              Оплпта:&nbsp;&nbsp;&nbsp;
               <MDTypography variant="caption" fontWeight="medium" textTransform="capitalize">
                 {contactNo}
               </MDTypography>
@@ -554,7 +551,7 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
           </MDBox>
           <MDBox mb={1} lineHeight={0}>
             <MDTypography variant="caption" color="text">
-              Website:&nbsp;&nbsp;&nbsp;
+              Сайт:&nbsp;&nbsp;&nbsp;
               <MDTypography variant="caption" fontWeight="medium">
                 {website}
               </MDTypography>
@@ -562,18 +559,18 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
           </MDBox>
           <MDBox mb={0} lineHeight={0}>
             <MDTypography variant="caption" color="text">
-              Category:&nbsp;&nbsp;&nbsp;
+              Пользователь:&nbsp;&nbsp;&nbsp;
               <MDTypography variant="caption" fontWeight="medium">
                 {category}
               </MDTypography>
             </MDTypography>
           </MDBox>
-          <MDBox mb={0} lineHeight={0} display="flex" flexDirection="row" alignItems="center">
+          {/* <MDBox mb={0} lineHeight={0} display="flex" flexDirection="row" alignItems="center">
             <MDTypography variant="caption" color="text">
-              Logo:&nbsp;&nbsp;&nbsp;
+              Фото:&nbsp;&nbsp;&nbsp;
             </MDTypography>
             <MDAvatar sx={{ cursor: "pointer" }} onClick={bankLogoModalOpen} src={logo} size="sm" />
-          </MDBox>
+          </MDBox> */}
         </MDBox>
       </MDBox>
     </>

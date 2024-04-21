@@ -80,7 +80,7 @@ const Login = () => {
             textAlign="center"
           >
             <MDTypography variant="h5" fontWeight="medium" color="white" mt={1}>
-              LOGIN
+              Вход
             </MDTypography>
           </MDBox>
           <MDBox pt={4} pb={3} px={3}>
@@ -110,7 +110,7 @@ const Login = () => {
                     email: e.target.value
                   })}
                   type="email"
-                  label="Email"
+                  label="Почта"
                   fullWidth
                   required
                 />
@@ -123,7 +123,7 @@ const Login = () => {
                     password: e.target.value
                   })}
                   type="password"
-                  label="Password"
+                  label="Пароль"
                   fullWidth
                   required />
               </MDBox>
@@ -138,7 +138,7 @@ const Login = () => {
                   /> : <MDButton
                     // disabled={loginUser.email === '' || loginUser.password === '' ? true : false}
                     variant="gradient" color="info" fullWidth type="submit" onClick={handleLogin}>
-                    LOGIN
+                    Добро поожаловать
                   </MDButton>
                 }
               </MDBox>

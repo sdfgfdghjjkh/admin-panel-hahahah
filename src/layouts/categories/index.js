@@ -157,7 +157,7 @@ function Categories() {
         open={categoryModal}
       >
         <BootstrapDialogTitle id="customized-dialog-title" onClose={categoryModalClose}>
-          <Typography variant="h3" color="secondary.main" sx={{ pt: 1, textAlign: "center" }}>Add Category</Typography>
+          <Typography variant="h3" color="secondary.main" sx={{ pt: 1, textAlign: "center" }}>Пополнение популяции <br/> мохнатых</Typography>
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <Box
@@ -169,7 +169,7 @@ function Categories() {
             autoComplete="off"
           >
             <TextField
-              label="Category Name"
+              label="Имя"
               type="text"
               color="secondary"
               required
@@ -181,7 +181,7 @@ function Categories() {
             />
             <Box sx={{ maxWidth: "100%", m: 2 }}>
               <FormControl fullWidth>
-                <InputLabel htmlFor="outlined-adornment-amount" >Image</InputLabel>
+                <InputLabel htmlFor="outlined-adornment-amount" >Фото</InputLabel>
                 <OutlinedInput
                   sx={{ height: "2.8rem" }}
                   id="outlined-adornment-amount"
@@ -248,7 +248,7 @@ function Categories() {
             /> : <MDButton variant="contained" color="info" type="submit"
               // disabled={brandCategoryData.name === '' ? true : false}
               onClick={onAddCategory}
-            >Save</MDButton>
+            >Сохранить</MDButton>
           }
         </DialogActions>
       </BootstrapDialog>
@@ -272,14 +272,14 @@ function Categories() {
                   >
                     <MDBox pt={2} pb={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
                       <MDTypography variant="h6" fontWeight="medium" color="white">
-                        All Categories
+                        Все мохнатые
                       </MDTypography>
                       <MDButton variant="gradient" color="light"
                         onClick={() => {
                           categoryModalOpen()
                         }}>
                         <Icon sx={{ fontWeight: "bold" }}>add</Icon>
-                        &nbsp;ADD CATEGORY
+                        &nbsp;Создать акк
                       </MDButton>
                     </MDBox>
                   </MDBox>

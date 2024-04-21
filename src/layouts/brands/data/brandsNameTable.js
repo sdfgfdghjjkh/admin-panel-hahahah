@@ -61,7 +61,7 @@ function Data() {
       return ({
         srNo: <SR_NO srNo={index + 1} />,
         brands: <BRAND_NAME image={items.logo} name={items.name} />,
-        action: <Link to={`/admin/brands/detail/${items.id}`}><MDButton variant="gradient" color="info" size="small">Detail</MDButton></Link>,
+        action: <Link to={`/admin/brands/detail/${items.id}`}><MDButton variant="gradient" color="info" size="small">Инфа</MDButton></Link>,
       })
     })]
   }

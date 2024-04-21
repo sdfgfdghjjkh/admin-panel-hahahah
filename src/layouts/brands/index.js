@@ -142,7 +142,6 @@ function Brands() {
         contactNo: brandsData.contactNo,
         website: brandsData.website,
         category: brandsData.category,
-        logo: brandsData.logo
       })
       const updateData = {
         uid: docId.id
@@ -194,7 +193,7 @@ function Brands() {
         open={brandsModal}
       >
         <BootstrapDialogTitle id="customized-dialog-title" onClose={brandsModalClose}>
-          <Typography variant="h3" color="secondary.main" sx={{ pt: 1, textAlign: "center" }}>Add Brand</Typography>
+          <Typography variant="h3" color="secondary.main" sx={{ pt: 1, textAlign: "center" }}>Дать задание</Typography>
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <Box
@@ -206,7 +205,7 @@ function Brands() {
             autoComplete="off"
           >
             <TextField
-              label="Brand Name"
+              label="Заголовок"
               type="text"
               rows={1}
               color="secondary"
@@ -218,7 +217,7 @@ function Brands() {
               })}
             />
             <TextField
-              label="Contact Number"
+              label="Оплата"
               type="number"
               rows={1}
               color="secondary"
@@ -230,7 +229,7 @@ function Brands() {
               })}
             />
             <TextField
-              label="Website URL"
+              label="Ссылка на сайт"
               type='url'
               rows={1}
               color="secondary"
@@ -243,7 +242,7 @@ function Brands() {
             />
             <Box sx={{ maxWidth: "100%", m: 2 }}>
               <FormControl fullWidth >
-                <InputLabel id="demo-simple-select-label" sx={{ height: "2.8rem" }} required>Select Brand Category</InputLabel>
+                <InputLabel id="demo-simple-select-label" sx={{ height: "2.8rem" }} required>Выбор пользователя</InputLabel>
                 <Select
                   sx={{ height: "2.8rem" }}
                   labelId="demo-simple-select-label"
@@ -262,8 +261,8 @@ function Brands() {
                   })}
                 </Select>
               </FormControl>
-              <FormControl fullWidth sx={{ mt: 2 }} >
-                <InputLabel htmlFor="outlined-adornment-amount" >Brand Logo</InputLabel>
+              {/* <FormControl fullWidth sx={{ mt: 2 }} >
+                <InputLabel htmlFor="outlined-adornment-amount" >Фотография</InputLabel>
                 <OutlinedInput
                   sx={{ height: "2.8rem" }}
                   id="outlined-adornment-amount"
@@ -298,7 +297,7 @@ function Brands() {
                   label="Brand Logo"
                 />
 
-              </FormControl>
+              </FormControl> */}
             </Box>
             {error === '' ? null :
               <MDBox mb={2} p={1}>
@@ -331,7 +330,7 @@ function Brands() {
             /> : <MDButton variant="contained" color="info" type="submit"
               // disabled={brandsData.name === '' || brandsData.contactNo === '' || brandsData.website === '' || brandsData.category === '' || brandsData.logo === '' ? true : false}
               onClick={onAddBrand}
-            >Save</MDButton>
+            >Сохранить</MDButton>
           }
         </DialogActions>
       </BootstrapDialog>
@@ -355,14 +354,14 @@ function Brands() {
                   >
                     <MDBox pt={2} pb={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
                       <MDTypography variant="h6" fontWeight="medium" color="white">
-                        All Brands
+                        Все задания
                       </MDTypography>
                       <MDButton variant="gradient" color="light"
                         onClick={() => {
                           brandsModalOpen()
                         }}>
                         <Icon sx={{ fontWeight: "bold" }}>add</Icon>
-                        &nbsp;ADD BRAND
+                        &nbsp;Дать задание
                       </MDButton>
                     </MDBox>
                   </MDBox>
