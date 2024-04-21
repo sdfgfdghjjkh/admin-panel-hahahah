@@ -158,7 +158,7 @@ function Banks() {
       <MDSnackbar
         color="success"
         icon="check"
-        title="Successfully Add"
+        title="Успешно бро"
         // content="Hello, world! This is a bankNotification message"
         // dateTime="11 mins ago"
         open={bankNotification}

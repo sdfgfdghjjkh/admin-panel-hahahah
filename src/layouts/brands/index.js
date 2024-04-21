@@ -180,7 +180,7 @@ function Brands() {
       <MDSnackbar
         color="success"
         icon="check"
-        title="Successfully Add"
+        title="Успешно бро"
         // content="Hello, world! This is a brandsNotification message"
         // dateTime="11 mins ago"
         open={brandsNotification}
@@ -192,9 +192,9 @@ function Brands() {
         aria-labelledby="customized-dialog-title"
         open={brandsModal}
       >
-        <BootstrapDialogTitle id="customized-dialog-title" onClose={brandsModalClose}>
+        {/* <BootstrapDialogTitle id="customized-dialog-title" onClose={brandsModalClose}>
           <Typography variant="h3" color="secondary.main" sx={{ pt: 1, textAlign: "center" }}>Дать задание</Typography>
-        </BootstrapDialogTitle>
+        </BootstrapDialogTitle> */}
         <DialogContent dividers>
           <Box
             component="form"

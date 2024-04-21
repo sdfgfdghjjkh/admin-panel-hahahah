@@ -137,7 +137,7 @@ function App() {
       {layout === "vr" && <Configurator />}
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/signup" element={<Signup />} /> */}
         {getRoutes(routes)}
         {getAuthRoutes(authRoutes)}
         {role === null ? <Route path="*" element={<Navigate to={`/login`} />} /> : <Route path="*" element={<Navigate to={`/${role}/`} />} />}

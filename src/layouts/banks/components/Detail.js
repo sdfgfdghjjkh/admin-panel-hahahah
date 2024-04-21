@@ -200,7 +200,7 @@ function Detail() {
       <MDSnackbar
         color="success"
         icon="check"
-        title="Successfully Add Card"
+        title="Успешно бро Card"
         // content="Hello, world! This is a bankCardNotification message"
         // dateTime="11 mins ago"
         open={bankCardNotification}

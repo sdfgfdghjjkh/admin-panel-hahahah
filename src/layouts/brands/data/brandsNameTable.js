@@ -41,12 +41,12 @@ function Data() {
   );
   const BRAND_NAME = ({ name, image }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
-      <MDAvatar src={image} name={name} size="sm" />
-      <MDBox ml={2} lineHeight={1}>
+      {/* <MDAvatar src={image} name={name} size="sm" /> */}
+      {/* <MDBox ml={2} lineHeight={1}> */}
         <MDTypography display="block" variant="button" fontWeight="medium" sx={{textTransform: 'capitalize'}}>
           {name}
         </MDTypography>
-      </MDBox >
+      {/* </MDBox > */}
     </MDBox>
 
   );

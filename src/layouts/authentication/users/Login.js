@@ -110,7 +110,7 @@ const Login = () => {
                     email: e.target.value
                   })}
                   type="email"
-                  label="Почта"
+                  label="Email"
                   fullWidth
                   required
                 />

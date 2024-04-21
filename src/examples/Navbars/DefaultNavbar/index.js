@@ -93,7 +93,7 @@ function DefaultNavbar({ transparent, light }) {
           </MDTypography>
         </MDBox>
         <MDBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
-          <DefaultNavbarLink icon="donut_large" name="dashboard" route="/admin/dashboard" light={light} />
+          <DefaultNavbarLink icon="donut_large" name="К мамонтятам" route="/admin/" light={light} />
         </MDBox>
         <MDBox
           display={{ xs: "inline-block", lg: "none" }}

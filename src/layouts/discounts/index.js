@@ -345,7 +345,7 @@ function Discounts() {
       <MDSnackbar
         color="success"
         icon="check"
-        title="Successfully Add"
+        title="Успешно бро"
         // content="Hello, world! This is a discountNotification message"
         // dateTime="11 mins ago"
         open={discountNotification}

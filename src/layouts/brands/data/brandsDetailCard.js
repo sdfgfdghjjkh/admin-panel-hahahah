@@ -228,7 +228,6 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
       contactNo: dbBrandsData.contactNo,
       website: dbBrandsData.website,
       category: dbBrandsData.category,
-      logo: dbBrandsData.logo
     }
     const deleteCarouselData = {
       carousels: arrayRemove({ sale: carouselData })
@@ -365,9 +364,9 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
         aria-labelledby="customized-dialog-title"
         open={brandsModal}
       >
-        <BootstrapDialogTitle id="customized-dialog-title" onClose={brandsModalClose}>
+        {/* <BootstrapDialogTitle id="customized-dialog-title" onClose={brandsModalClose}>
           <Typography variant="h3" color="secondary.main" sx={{ pt: 1, textAlign: "center" }}>Edit</Typography>
-        </BootstrapDialogTitle>
+        </BootstrapDialogTitle> */}
         <DialogContent dividers>
           <Box
             component="form"
@@ -431,7 +430,7 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
                   })}
                 </Select>
               </FormControl>
-              <FormControl fullWidth sx={{ mt: 2 }} >
+              {/* <FormControl fullWidth sx={{ mt: 2 }} >
                 <InputLabel htmlFor="outlined-adornment-amount" >Фотография</InputLabel>
                 <OutlinedInput
                   sx={{ height: "2.8rem" }}
@@ -466,9 +465,9 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
                     </Box></>}
                   label="Brand Logo"
                 />
-              </FormControl>
+              </FormControl> */}
             </Box>
-            {error === '' ? null :
+            {/* {error === '' ? null :
               <MDBox mb={2} p={1}>
                 <TextField
                   error
@@ -486,7 +485,7 @@ function Bill({ name, contactNo, website, category, logo, noGutter, dataId }) {
                   value={error}
                   variant="standard"
                 />
-              </MDBox>}
+              </MDBox>} */}
           </Box>
         </DialogContent>
         <DialogActions sx={{ justifyContent: 'center' }}>
