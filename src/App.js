@@ -120,7 +120,7 @@ function App() {
   return (
     <ThemeProvider theme={darkMode ? themeDark : theme}>
       <CssBaseline />
-      {layout === "/admin/dashboard" && (
+      {layout === "/admin/" && (
         <>
           {role && <Sidenav
             color={sidenavColor}
